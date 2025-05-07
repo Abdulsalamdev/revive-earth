@@ -132,8 +132,12 @@ export default function Home() {
         </div>
         <div className="px-[30px] flex justify-center gap-[40px] flex-wrap items-center">
           <div>
-            <p className="text-[#83BC25] text-[24px] font-medium">Inovation on Wheels</p>
-            <p className="text-[#29292B] font-medium text-[clamp(40px,4vw,64px)] pb-[10px]">Building The Futures</p>
+            <p className="text-[#83BC25] text-[24px] font-medium">
+              Inovation on Wheels
+            </p>
+            <p className="text-[#29292B] font-medium text-[clamp(40px,4vw,64px)] pb-[10px]">
+              Building The Futures
+            </p>
             <p className="text-[#0F0B0B] text-[16px] max-w-[400px] pb-[20px]">
               Transform Your Ride - Retrofit your existing petrol-powered
               vehicle into a sleek, eco-friendly electric machine with our
@@ -143,8 +147,162 @@ export default function Home() {
             <button className="hero-button bg-[#000000]">ORDER NOW</button>
           </div>
           <div>
-          <Image src={"/images/building.png"} width={500} height={500} alt={""} />
+            <Image
+              src={"/images/building.png"}
+              width={500}
+              height={500}
+              alt={""}
+            />
           </div>
+        </div>
+      </section>
+      <article className="bg-[#101010] px-[30px] pt-[20px] pb-[10px]">
+        <p className="text-[#FFFFFF] text-center text-[clamp(45px,6vw,96px)] font-medium">
+          CONVERSION KIT
+        </p>
+        <p className="text-[18px] text-[#F3F8E9] text-center pb-[30px]">
+          Revive Earth's Electrifying Innovation: Elevate Any Ride into the
+          Future with Our Universal Conversion Kits!
+        </p>
+        <div className="flex flex-wrap justify-center items-center gap-[30px]">
+          <div className="flex flex-col gap-[10px] card">
+            <Image src={"/images/flash.png"} width={40} height={40} alt={""} />
+            <p className="text-[#FFFFFF] text-[24px] font-medium w-[280px]">
+              Cost-efficiency with faster time to market
+            </p>
+            <p className="text-[#FFFFFF] text-[16px] max-w-[290px]">
+              Get up and running quickly with a fully functioning auto parts
+              storefront and mobile experience. Transparent pricing and no
+              hidden fees mean no surprises. You get the freedom to build the
+              solution you want at a budget that’s comfortable for you.
+            </p>
+          </div>
+          <div className="flex flex-col gap-[10px] card">
+            <Image src={"/images/flash.png"} width={40} height={40} alt={""} />
+            <p className="text-[#FFFFFF] text-[24px] font-medium w-[280px]">
+              Made for the complexity of automotive
+            </p>
+            <p className="text-[#FFFFFF] text-[16px] max-w-[290px]">
+              No matter your automotive business model, industry, or vertical,
+              we have you covered. Our automotive innovative parts solutions are
+              flexible enough to work with the parameters of your business,
+              partners, customers, and supply chain.
+            </p>
+          </div>
+          <div className="flex flex-col gap-[10px] card">
+            <Image src={"/images/flash.png"} width={40} height={40} alt={""} />
+            <p className="text-[#FFFFFF] text-[24px] font-medium w-[280px]">
+              24/7 customer support
+            </p>
+            <p className="text-[#FFFFFF] text-[16px] max-w-[290px]">
+              Forget about hard-coded, fragmented or one-size-fits-all solutions
+              for complex building use cases. Our key advantage is at the core
+              of the product: the architecture, technology and flexibility to
+              accommodate, grow and scale your business.
+            </p>
+          </div>
+        </div>
+        <div className="flex justify-center items-center gap-[30px] my-[30px] flex-wrap">
+          <Image src={"/images/kit1.png"} width={500} height={400} alt={""} />
+          <div className="flex flex-col gap-[20px]">
+            <Image src={"/images/kit2.png"} width={300} height={300} alt={""} />
+            <Image src={"/images/kit3.png"} width={300} height={300} alt={""} />
+          </div>
+        </div>
+        <div className="flex gap-[30px] justify-center items-center flex-wrap pb-[20px]">
+          <p className="text-[#FFFFFF] text-[28px] font-normal">
+            Some of the products we’ve converted:
+          </p>
+          <div className="flex gap-[5px] items-center">
+            <Image src={"/images/flash.png"} alt={""} width={30} height={30} />
+            <p className="text-[28px] font-medium text-[#FFFFFF] ">
+              Electric Minibus
+            </p>
+          </div>
+          <div className="flex gap-[5px] items-center">
+            <Image src={"/images/flash.png"} alt={""} width={30} height={30} />
+            <p className="text-[28px] font-medium text-[#FFFFFF]">
+              Electric Tricyle
+            </p>
+          </div>
+        </div>
+      </article>
+      <section className="bg-[#FFFFFF] p-[30px]">
+        <p className="text-[20px] font-medium text-[#000000] pb-[20px]">
+          Battery Sbwapping System
+        </p>
+        <div className="bg-[#BDBDBD] w-full h-[1px] mb-[20px]"></div>
+        <Image
+          src={"/images/battery.png"}
+          alt={""}
+          width={400}
+          height={400}
+          className="w-full h-auto pb-[30px]"
+        />
+        <p className="text-[24px] font-medium text-[#83BC25]">
+          Why Choose Electric Mobility
+        </p>
+        <p className="text-[#050404] font-medium text-[clamp(45px,6vw,96px)]">
+          GO ELECTRIC
+        </p>
+        <div className="flex flex-wrap justify-center md:justigy-around gap-[30px] mt-[10px] mb-[20px]">
+          <div className="flex flex-col gap-[10px] card">
+            <Image src={"/images/flash.png"} width={40} height={40} alt={""} />
+            <p className="text-[24px] font-medium w-[280px] text-[#050404]">
+              Indigenous Technology
+            </p>
+            <p className="text-[16px] max-w-[290px] text-[#0F0B0B]">
+              We have a resilient team that is well versed in the area of
+              electric mobility and is obsessed with changing the status quo of
+              our clime using technology.
+            </p>
+          </div>
+          <div className="flex flex-col gap-[10px] card">
+            <Image src={"/images/flash.png"} width={40} height={40} alt={""} />
+            <p className="text-[24px] font-medium w-[280px] text-[#050404]">
+              Smart technology
+            </p>
+            <p className="text-[16px] max-w-[290px] text-[#0F0B0B]">
+              Our vehicles incorporate smart technologies for driver and road
+              safety, such as wireless battery monitor, and GPS connectivity in
+              demand. The regenerative braking system maximizes vehicle momentum
+              to send power back to the battery instead of wasting it as heat in
+              the brake pads.
+            </p>
+          </div>
+          <div className="flex flex-col gap-[10px] card">
+            <Image src={"/images/flash.png"} width={40} height={40} alt={""} />
+            <p className="text-[24px] font-medium w-[280px] text-[#050404] ">
+              Robustness and efficiency
+            </p>
+            <p className=" text-[16px] max-w-[290px] text-[#0F0B0B]">
+              Our swapping network technology ensures that you never really run
+              out of power while in motion and up to 95% efficiency is achieved
+              by our vehicles while still delivering the desired performance in
+              terms of speed.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="flex justify-center items-center gap-[30px] flex-wrap p-[50px] eletric">
+       
+        <Image src={"/images/electric2.png"} alt="" width={450} height={400} className=""/>
+     
+        <div className="bg-[#1C290F] p-[30px] flex flex-col gap-[15px]">
+          <p className="text-[32px] font-medium text-[#E7E7E7] max-w-[420px]">
+            Electric Vehicles made for Africa, in Africa, by Africans.
+          </p>
+          <p className="text-[16px] font-normal text-[#E7E7E7] max-w-[400px]">
+            We're firm believers that as electric vehicles become a necessity,
+            the demand for functional electricity will soar. This trend will
+            extend to all aspects of our society.
+          </p>
+          <p className="text-[16px] font-normal max-w-[400px] text-[#E7E7E7]">
+            The future of mobility lies in portable electric vehicles. They
+            offer unparalleled convenience and cost-effectiveness, paving the
+            way for robust electric AI cars. In fact, this path is not just
+            preferable; it's inevitable.
+          </p>
         </div>
       </section>
     </main>
