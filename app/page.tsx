@@ -285,9 +285,14 @@ export default function Home() {
         </div>
       </section>
       <section className="flex justify-center items-center gap-[30px] flex-wrap p-[50px] eletric">
-       
-        <Image src={"/images/electric2.png"} alt="" width={450} height={400} className=""/>
-     
+        <Image
+          src={"/images/electric2.png"}
+          alt=""
+          width={450}
+          height={400}
+          className=""
+        />
+
         <div className="bg-[#1C290F] p-[30px] flex flex-col gap-[15px]">
           <p className="text-[32px] font-medium text-[#E7E7E7] max-w-[420px]">
             Electric Vehicles made for Africa, in Africa, by Africans.
@@ -303,6 +308,92 @@ export default function Home() {
             way for robust electric AI cars. In fact, this path is not just
             preferable; it's inevitable.
           </p>
+        </div>
+      </section>
+      <section className="m-[clamp(30px,3.2vw,50px)]">
+        <div className="flex justify-center flex-wrap
+         gap-[50px] xl:justify-around">
+          <Image
+            src={"/images/vehicle.png"}
+            alt={""}
+            width={500}
+            height={400}
+          />
+          <div>
+            <p className="text-[24px] font-medium text-[#83BC25]">
+              Why Consider Electric
+            </p>
+            <p className="text-[#050404] font-medium text-[clamp(45px,6vw,96px)]">
+              VEHICLES
+            </p>
+            <div className="flex flex-col gap-[30px]">
+              <div>
+                <div className="flex items-center gap-[10px] mb-[10px]">
+                  <Image
+                    src={"/images/cleaner.png"}
+                    width={30}
+                    height={30}
+                    alt={""}
+                  />
+                  <span className="text-[#050404] font-medium text-[24px]">
+                    Cleaner
+                  </span>
+                </div>
+                <div className="text-[#0F0B0B] text-[16px] font-light max-w-[480px]">
+                  Electric Vehicles drive on Electricity which can be gotten
+                  from renewable and sustainable sources like Solar, Hydrogen
+                  Fuel, biogas, wind, etc. If only 40% of automobiles can run on
+                  electricity, it cuts down the global climate change menace by
+                  11.6%. According to UNEP data, 14 million used vehicles were
+                  shipped out of European Union, Japan, and the United States
+                  between 2015 and 2018 alone, and 90% of the receiving regions
+                  have weak/no climate change regulation policies.
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center gap-[10px] mb-[10px]">
+                  <Image
+                    src={"/images/cheaper.png"}
+                    width={30}
+                    height={30}
+                    alt={""}
+                  />
+                  <span className="text-[#050404] font-medium text-[24px]">
+                    Cheaper
+                  </span>
+                </div>
+                <div className="text-[#0F0B0B] text-[16px] font-light max-w-[480px]">
+                  The operational cost of a vehicle is cut by 66.7%, and the
+                  maintenance cost by 90% if it is powered by electricity. This
+                  presents a groundbreaking opportunity for commercial drivers
+                  to make more money. Merchants as well can have a better value
+                  for their investments in the transport business.
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center gap-[10px] mb-[10px]">
+                  <Image
+                    src={"/images/convenient.png"}
+                    width={30}
+                    height={30}
+                    alt={""}
+                  />
+                  <span className="text-[#050404] font-medium text-[24px]">
+                    Convenient
+                  </span>
+                </div>
+                <div className="text-[#0F0B0B] text-[16px] font-light max-w-[480px]">
+                  Electric vehicles are easy, more convenient, and safer to
+                  drive. They are far more efficient, and the drivetrain is more
+                  effective to accommodate low losses, greater performance, and
+                  more responsiveness. The future of driving lies with electric
+                  vehicles because it makes the implementation of modern
+                  technologies such as AI, and machine learning extremely easy
+                  on the vehicle.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
