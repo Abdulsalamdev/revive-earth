@@ -1,9 +1,32 @@
 "use client";
+import Card from "@/components/Card";
 import Image from "next/image";
 import { useState } from "react";
+import cardData from '@/data/cards.json';
+
+const CARDS_PER_PAGE = 3;
+const CARD_WIDTH = 256; // approx width of each card in px (w-64 = 16rem = 256px)
+const CARD_GAP = 16; 
 
 export default function Home() {
   const [open, setOpen] = useState(false);
+const [startIndex, setStartIndex] = useState(0);
+
+  const maxIndex = cardData.length - CARDS_PER_PAGE;
+
+   const handleNext = () => {
+    if (startIndex < maxIndex) {
+      setStartIndex(startIndex + CARDS_PER_PAGE);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - CARDS_PER_PAGE);
+    }
+  };
+  // Calculate translateX value based on startIndex
+  const translateX = -(startIndex * (CARD_WIDTH + CARD_GAP));
   return (
     <main>
       <section className="hero pt-[30px] pb-[70px] px-[30px]">
@@ -245,7 +268,7 @@ export default function Home() {
         <p className="text-[#050404] font-medium text-[clamp(45px,6vw,96px)]">
           GO ELECTRIC
         </p>
-        <div className="flex flex-wrap justify-center md:justigy-around gap-[30px] mt-[10px] mb-[20px]">
+        <div className="flex flex-wrap justify-center xl:justify-between gap-[30px] mt-[10px] mb-[20px]">
           <div className="flex flex-col gap-[10px] card">
             <Image src={"/images/flash.png"} width={40} height={40} alt={""} />
             <p className="text-[24px] font-medium w-[280px] text-[#050404]">
@@ -311,8 +334,10 @@ export default function Home() {
         </div>
       </section>
       <section className="m-[clamp(30px,3.2vw,50px)]">
-        <div className="flex justify-center flex-wrap
-         gap-[50px] xl:justify-around">
+        <div
+          className="flex justify-center flex-wrap
+         gap-[50px] xl:justify-around"
+        >
           <Image
             src={"/images/vehicle.png"}
             alt={""}
@@ -398,13 +423,45 @@ export default function Home() {
       </section>
       <section className="pt-[clamp(50px,5vw,80px)] pl-[clamp(30px,3.2vw,50px)] pb-[clamp(30px,3.2vw,50px)] bg-[#1A1A1A]">
         <div className="flex justify-between gap-[20px] flex-wrap items-center mr-[40px]">
-          <p className="text-[#FFFFFB] font-medium text-[clamp(30px,3.2vw,50px)]">Our Stories</p>
+          <p className="text-[#FFFFFB] font-medium text-[clamp(30px,3.2vw,50px)]">
+            Our Stories
+          </p>
           <div className="flex gap-[30px] items-center">
-            <Image src={"/images/left.png"} alt={""} width={30} height={30} />
-            <Image src={"/images/right.png"} alt={""} width={40} height={40} />
+            <button
+                onClick={handlePrev}
+          disabled={startIndex === 0}
+          className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
+            >
+              <Image src={"/images/left.png"} alt={""} width={30} height={30} />
+            </button>
+            <button
+               onClick={handleNext}
+          disabled={startIndex >= maxIndex}
+          className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
+            >
+              <Image
+                src={"/images/right.png"}
+                alt={""}
+                width={40}
+                height={40}
+              />
+            </button>
           </div>
         </div>
-
+             <div className="overflow-hidden mt-[20px]">
+        <div
+          className="flex space-x-4"
+          style={{
+            transform: `translateX(${translateX}px)`,
+            transition: 'transform 0.5s ease',
+            width: `${cardData.length * (CARD_WIDTH + CARD_GAP)}px`,
+          }}
+        >
+          {cardData.map((card) => (
+            <Card key={card.id} title={card.title} description={card.description} img={card.img} />
+          ))}
+        </div>
+      </div>
       </section>
     </main>
   );

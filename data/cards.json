@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Innov8 Boost Employment",
+    "img": "/images/story1.png",
+    "description": "Isreali Embassy, Innov8 Boost Employment,  Bolster Nigeria’s Economic Prosperity Through i-FAIR..."
+  },
+  {
+    "id": 2,
+    "img": "/images/story2.png",
+    "title": "EV100 Pledge",
+    "description": "More than 110 companies have signed up to the EV100 pledge, committing to fully zero-emission vehicle fleets by 2030..."
+  },
+  {
+    "id": 3,
+    "img": "/images/story.png",
+    "title": "Global Market",
+    "description": "Vehicle manufacturers representing more than 30% of the global market now have commitments to phase out fossil-fueled..."
+  },
+  {
+    "id": 4,
+    "img": "/images/story2.png",
+    "title": "COP26 Declaration",
+    "description": "The COP26 Declaration on Accelerating the Transition to 100% Zero-Emission Cars and Vans brought together over 35 countries, 6..."
+  },
+  {
+    "id": 5,
+    "img": "/images/story.png",
+    "title": "Innov8 Boost Employment",
+    "description": "Isreali Embassy, Innov8 Boost Employment,  Bolster Nigeria’s Economic Prosperity Through i-FAIR..."
+  },
+  {
+    "id": 6,
+    "img": "/images/story2.png",
+    "title": "EV100 Pledge",
+    "description": "Vehicle manufacturers representing more than 30% of the global market now have commitments to phase out fossil-fueled..."
+  },
+  {
+    "id": 7,
+    "img": "/images/story1.png",
+    "title": "Card Title 7",
+    "description": "The COP26 Declaration on Accelerating the Transition to 100% Zero-Emission Cars and Vans brought together over 35 countries, 6..."
+  }
+]
