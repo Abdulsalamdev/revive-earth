@@ -396,6 +396,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="pt-[clamp(50px,5vw,80px)] pl-[clamp(30px,3.2vw,50px)] pb-[clamp(30px,3.2vw,50px)] bg-[#1A1A1A]">
+        <div className="flex justify-between gap-[20px] flex-wrap items-center mr-[40px]">
+          <p className="text-[#FFFFFB] font-medium text-[clamp(30px,3.2vw,50px)]">Our Stories</p>
+          <div className="flex gap-[30px] items-center">
+            <Image src={"/images/left.png"} alt={""} width={30} height={30} />
+            <Image src={"/images/right.png"} alt={""} width={40} height={40} />
+          </div>
+        </div>
+
+      </section>
     </main>
   );
 }
