@@ -2,19 +2,19 @@
 import Card from "@/components/Card";
 import Image from "next/image";
 import { useState } from "react";
-import cardData from '@/data/cards.json';
+import cardData from "@/data/cards.json";
 
 const CARDS_PER_PAGE = 3;
 const CARD_WIDTH = 256; // approx width of each card in px (w-64 = 16rem = 256px)
-const CARD_GAP = 16; 
+const CARD_GAP = 16;
 
 export default function Home() {
   const [open, setOpen] = useState(false);
-const [startIndex, setStartIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
 
   const maxIndex = cardData.length - CARDS_PER_PAGE;
 
-   const handleNext = () => {
+  const handleNext = () => {
     if (startIndex < maxIndex) {
       setStartIndex(startIndex + CARDS_PER_PAGE);
     }
@@ -428,16 +428,16 @@ const [startIndex, setStartIndex] = useState(0);
           </p>
           <div className="flex gap-[30px] items-center">
             <button
-                onClick={handlePrev}
-          disabled={startIndex === 0}
-          className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
+              onClick={handlePrev}
+              disabled={startIndex === 0}
+              className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
             >
               <Image src={"/images/left.png"} alt={""} width={30} height={30} />
             </button>
             <button
-               onClick={handleNext}
-          disabled={startIndex >= maxIndex}
-          className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
+              onClick={handleNext}
+              disabled={startIndex >= maxIndex}
+              className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
             >
               <Image
                 src={"/images/right.png"}
@@ -448,20 +448,64 @@ const [startIndex, setStartIndex] = useState(0);
             </button>
           </div>
         </div>
-             <div className="overflow-hidden mt-[20px]">
-        <div
-          className="flex space-x-4"
-          style={{
-            transform: `translateX(${translateX}px)`,
-            transition: 'transform 0.5s ease',
-            width: `${cardData.length * (CARD_WIDTH + CARD_GAP)}px`,
-          }}
-        >
-          {cardData.map((card) => (
-            <Card key={card.id} title={card.title} description={card.description} img={card.img} />
-          ))}
+        <div className="overflow-hidden mt-[20px]">
+          <div
+            className="flex space-x-4"
+            style={{
+              transform: `translateX(${translateX}px)`,
+              transition: "transform 0.5s ease",
+              width: `${cardData.length * (CARD_WIDTH + CARD_GAP)}px`,
+            }}
+          >
+            {cardData.map((card) => (
+              <Card
+                key={card.id}
+                title={card.title}
+                description={card.description}
+                img={card.img}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+      <section className="bg-[#F3F8E9] px-4 md:px-[50px] py-6 md:py-[30px] flex flex-col md:flex-row flex-wrap justify-center items-start gap-6 md:gap-[30px]">
+        <article className="bg-[#FFFFFF] rounded-[10px] p-[35px] ">
+          <p className="text-[#0B0C0E] text-[clamp(40px,4vw,60px)] font-medium">
+            CONTACT US
+          </p>
+          <p className="text-[14px] font-normal text-[#0F0B0B] max-w-[520px] pb-[20px]">
+            We accept bulk orders for custom electric vehicles tailored for
+            delivery companies and organizations for intra-facility transport.
+          </p>
+          <form className="flex flex-col gap-[20px]">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Enter your phone number"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <textarea
+              name="message"
+              placeholder="Your message..."
+              rows={4}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button className="bg-[#1C290F] flex justify-center w-full p-[15px] text-[#FFFFFF] font-semibold text-[16px]">Submit</button>
+          </form>
+        </article>
+        <Image src={"/images/contact.jpg"} alt={""} width={400} height={400} />
       </section>
     </main>
   );
