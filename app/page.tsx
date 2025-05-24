@@ -502,11 +502,67 @@ export default function Home() {
               rows={4}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button className="bg-[#1C290F] flex justify-center w-full p-[15px] text-[#FFFFFF] font-semibold text-[16px]">Submit</button>
+            <button className="bg-[#1C290F] flex justify-center w-full p-[15px] text-[#FFFFFF] font-semibold text-[16px]">
+              Submit
+            </button>
           </form>
         </article>
-        <Image src={"/images/contact.jpg"} alt={""} width={400} height={400} />
+        <Image
+          src={"/images/contact.jpg"}
+          alt={""}
+          width={400}
+          height={400}
+          className="hidden md:block"
+        />
       </section>
+      <footer className="flex flex-wrap gap-[40px] justify-between px-[40px] py-[25px] bg-[#2E420D] items-center">
+        <article className="flex flex-col gap-[20px]">
+          <Image src={"/images/revive.png"} width={60} height={60} alt={""} className="w-[140px] h-auto" />
+          <div className="max-w-[378px] text-[#FFFFFF] text-[16px] font-light">
+            We retrofit existing gasoline tricycles/minibuses with the electric
+            drivetrain. We also assemble/manufacture new, cheap and functional
+            electric vehicles, and operate a convenient battery charge/swap
+            network.
+          </div>
+        </article>
+        <div className="flex gap-[30px] flex-wrap">
+          <div className="flex flex-col text-[#FFFFFB] font-normal text-[18px] gap-[10px]">
+            <p className="font-medium">Links</p>
+            <p>Home</p>
+            <p>Why Us</p>
+            <p>Features</p>
+          </div>
+          <div className="flex flex-col text-[#FFFFFB] font-normal text-[18px] gap-[10px]">
+            <p className="font-medium">Company</p>
+            <p>Our Team</p>
+            <p>Our Stories</p>
+            <p>Contact Us</p>
+          </div>
+        </div>
+        <section className="flex flex-col gap-[20px]">
+          <div className="p-[10px] rounded-full bg-[#FFFFFF] w-fit self-end">
+          <Image src={"/images/arrow.png"} width={50} height={50} alt={""} className="w-auto h-[30px]" />
+          </div>
+          <p className="font-medium text-[#FFFFFB] text-[20px]">Subscribe to our newsletter</p>
+          <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              className="w-full px-4 py-2 border-b-[2px] text-[#FFFFFB] text-[20px] pb-[10px] border-b-[#FFFFFB] rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-[#FFFFFB]"
+            />
+            <p className="text-[#FFFFFF] text-[16px] font-normal">Follow RE On Social Media Or just get in touch:</p>
+            <div className="flex flex-wrap gap-[15px] justify-center">
+              <Image src={"/images/call.png"} alt={""} width={40} height={40} />
+              <Image src={"/images/insta.png"} alt={""} width={40} height={40} />
+              <Image src={"/images/linkedin.png"} alt={""} width={40} height={40} />
+              <Image src={"/images/message.png"} alt={""} width={40} height={40} />
+              <Image src={"/images/whatsapp.png"} alt={""} width={40} height={40} />
+              <Image src={"/images/youtube.png"} alt={""} width={40} height={40} />
+              <Image src={"/images/facebook.png"} alt={""} width={40} height={40} />
+              <Image src={"/images/twitter.png"} alt={""} width={40} height={40} />
+            </div>
+        </section>
+      </footer>
     </main>
   );
 }
