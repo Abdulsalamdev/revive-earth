@@ -3,6 +3,7 @@ import Card from "@/components/Card";
 import Image from "next/image";
 import { useState } from "react";
 import cardData from "@/data/cards.json";
+import Link from "next/link";
 
 const CARDS_PER_PAGE = 3;
 const CARD_WIDTH = 256; // approx width of each card in px (w-64 = 16rem = 256px)
@@ -29,17 +30,17 @@ export default function Home() {
   const translateX = -(startIndex * (CARD_WIDTH + CARD_GAP));
   return (
     <main>
-      <section className="hero pt-[30px] pb-[70px] px-[30px]">
+      <section className="hero pt-[30px] pb-[70px] px-[30px]" id="home">
         <nav className="hidden sm:flex justify-center items-center border rounded-[31px] py-[20px] px-[35px] mb-[30px] border-[#8F73F4] gap-[clamp(24px,4.4vw,69px)] w-fit justify-self-center relative">
-          <span className="text-[#FFFFFF] font-semibold text-[16px]">Home</span>
-          <span className="text-[#FFFFFF] font-normal text-[16px]">
+          <Link href={"#home"} className="text-[#FFFFFF] font-semibold text-[16px]">Home</Link>
+          <Link href={"#technology"} className="text-[#FFFFFF] font-normal text-[16px]">
             Technology
-          </span>
+          </Link>
           <Image src={"/images/logo.png"} width={100} height={100} alt={""} />
-          <span className="text-[#FFFFFF] font-normal text-[16px]">News</span>
-          <span className="text-[#FFFFFF] font-normal text-[16px]">
+          <Link href={"#news"} className="text-[#FFFFFF] font-normal text-[16px]">News</Link>
+          <Link href={"#contact"} className="text-[#FFFFFF] font-normal text-[16px]">
             Contact Us
-          </span>
+          </Link>
         </nav>
         <div className="flex sm:hidden justify-between ">
           <Image src={"/images/logo.png"} width={100} height={100} alt={""} />
@@ -179,7 +180,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <article className="bg-[#101010] px-[30px] pt-[20px] pb-[10px]">
+      <article className="bg-[#101010] px-[30px] pt-[20px] pb-[10px]" id="technology">
         <p className="text-[#FFFFFF] text-center text-[clamp(45px,6vw,96px)] font-medium">
           CONVERSION KIT
         </p>
@@ -268,7 +269,7 @@ export default function Home() {
         <p className="text-[#050404] font-medium text-[clamp(45px,6vw,96px)]">
           GO ELECTRIC
         </p>
-        <div className="flex flex-wrap justify-center xl:justify-between gap-[30px] mt-[10px] mb-[20px]">
+        <div className="flex flex-wrap justify-center  gap-[30px]">
           <div className="flex flex-col gap-[10px] card">
             <Image src={"/images/flash.png"} width={40} height={40} alt={""} />
             <p className="text-[24px] font-medium w-[280px] text-[#050404]">
@@ -421,7 +422,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="pt-[clamp(50px,5vw,80px)] pl-[clamp(30px,3.2vw,50px)] pb-[clamp(30px,3.2vw,50px)] bg-[#1A1A1A]">
+      {/* News Section */}
+      <section className="pt-[clamp(50px,5vw,80px)] pl-[clamp(30px,3.2vw,50px)] pb-[clamp(30px,3.2vw,50px)] bg-[#1A1A1A]" id="news">
         <div className="flex justify-between gap-[20px] flex-wrap items-center mr-[40px]">
           <p className="text-[#FFFFFB] font-medium text-[clamp(30px,3.2vw,50px)]">
             Our Stories
@@ -468,7 +470,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#F3F8E9] px-4 md:px-[50px] py-6 md:py-[30px] flex flex-col md:flex-row flex-wrap justify-center items-start gap-6 md:gap-[30px]">
+      {/* Contact Us Section */}
+      <section className="bg-[#F3F8E9] px-4 md:px-[50px] py-6 md:py-[30px] flex flex-col md:flex-row flex-wrap justify-center items-start gap-6 md:gap-[30px]" id="contact">
         <article className="bg-[#FFFFFF] rounded-[10px] p-[35px] ">
           <p className="text-[#0B0C0E] text-[clamp(40px,4vw,60px)] font-medium">
             CONTACT US
